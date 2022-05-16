@@ -13,16 +13,13 @@ class Display extends Component {
                     <Card.Header>{header}</Card.Header>
                     <Card.Body>
                         <Card.Title>{title}</Card.Title>
-                        <Card.Text>
-                            {text}
-                        </Card.Text>
+                        <Card.Text>{text}</Card.Text>
                         <Nav.Link href={theLink}>
                             <Button variant="info" size="lg">Get Started</Button>
                         </Nav.Link>
                     </Card.Body>
                 </Card>
             </div>
-
         )
     }
 }

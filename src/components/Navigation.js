@@ -8,7 +8,7 @@ class Navigation extends Component {
         return (
             <div>
                 <Navbar bg="dark" variant="dark" sticky="top" extend="md" collapseOnSelect>
-                    <Navbar.Brand href="/"  style={{marginLeft: "10px"}} >
+                    <Navbar.Brand href="/" style={{marginLeft: "10px"}} >
                         <img src={logo} alt="Logo" width="50px" />
                         {' '}Open AI 
                     </Navbar.Brand>

@@ -1,6 +1,5 @@
 // Reference: Skolo Online, Create AI Content Generator with Reactjs GPT-3 OpenAI API, https://www.youtube.com/watch?v=Xxtu-bkSAB8
 
-import './App.css';
 import React from 'react';
 import Navigation from './components/Navigation';
 import Home from './components/Home';
