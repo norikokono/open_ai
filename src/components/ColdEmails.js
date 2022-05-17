@@ -23,7 +23,7 @@ class ColdEmails extends Component {
 
     // Open AI code ---------------------------
         const configuration = new Configuration({
-            apiKey: process.env.OPENAI_API_KEY,
+            apiKey: process.env.REACT_APP_OPENAI_API_KEY,
         });
         const openai = new OpenAIApi(configuration);
 
@@ -46,32 +46,33 @@ class ColdEmails extends Component {
 
     render() {
         return (
-            <div>
+            <div style={{marginBottom:100}}>
                 <Container>   
-                        <img
-                        className="d-block w-100"
-                        src={openAiImg}
-                        alt="Open AI Logo" />
-                    <h1 style={{color: "MediumOrchid"}}>Generate Cold Emails</h1>
-                    <h4>This is perfect for marketing agents or companies who need fresh ideas daily on cold email content that is created by AI technology.</h4>
+                    <img
+                    className="d-block w-100"
+                    src={openAiImg}
+                    alt="Open AI Logo" />
+                    <h1 style={{color: "MediumOrchid", marginTop: 20}}>Generate Cold Emails</h1>
+                    <h4 style={{marginBottom: 20}}>This is perfect for marketing agents or companies who need fresh ideas daily on cold email content that is created by AI technology.</h4>
                     <Form onSubmit={this.onFormSubmit}>
                         <Form.Group className="mb-3" controlId="formBasicColdEmail">
                             <Form.Label>What product would you like to get a description for?</Form.Label>
                             <Form.Control
                                 type="text"
                                 name="emailIdea"
-                                placeholder="Enter Email Idea" />
+                                placeholder="Enter Email Idea"
+                                className="shadow-sm"/>
                             <Form.Text className="text-muted">
                                 Enter as much information as possible for more accurate descriptions.
                             </Form.Text>
                         </Form.Group>
 
-                        <Button variant="light" size="lg" type="submit">
+                        <Button variant="light" size="lg" type="submit" style={{marginBottom: 20}} className="shadow-sm">
                             <span role="img" aria-label="robot">🤖</span> Get AI Suggestions <span role="img" aria-label="thinking face Emoji">🤔</span>
                         </Button>
                     </Form>
 
-                    <Card>
+                    <Card className="shadow">
                         <Card.Body>
                             <Card.Title>
                                 <h6>{this.state.heading}</h6>
@@ -90,3 +91,4 @@ class ColdEmails extends Component {
 }
 
 export default ColdEmails;
+

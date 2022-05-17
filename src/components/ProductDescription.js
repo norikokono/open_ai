@@ -23,7 +23,7 @@ class ProductDescription extends Component {
 
     // Open AI code ---------------------------
         const configuration = new Configuration({
-            apiKey: process.env.OPENAI_API_KEY,
+            apiKey: process.env.REACT_APP_OPENAI_API_KEY,
         });
         const openai = new OpenAIApi(configuration);
 
@@ -45,33 +45,35 @@ class ProductDescription extends Component {
     }
 
     render() {
+        
         return (
-            <div>
+            <div style={{marginBottom:100}}>
                 <Container>   
-                        <img
-                        className="d-block w-100"
-                        src={openAiImg}
-                        alt="Open AI Logo" />
-                    <h1 style={{color: "MediumOrchid"}}>Generate Product Description</h1>
-                    <h4>Generate product descriptions for any type of product, simply enter the name and product description to get started.</h4>
+                    <img
+                    className="d-block w-100"
+                    src={openAiImg}
+                    alt="Open AI Logo" />
+                    <h1 style={{color: "MediumOrchid", marginTop: 20}}>Generate Product Description</h1>
+                    <h4 style={{marginBottom: 20}}>Generate product descriptions for any type of product, simply enter the name and product description to get started.</h4>
                     <Form onSubmit={this.onFormSubmit}>
                         <Form.Group className="mb-3" controlId="formBasicProductDescription">
                             <Form.Label>What product would you like to get a description for?</Form.Label>
                             <Form.Control
                                 type="text"
                                 name="productName"
-                                placeholder="Enter Product Name" />
+                                placeholder="Enter Product Name"
+                                className="shadow-sm" />
                             <Form.Text className="text-muted">
                                 Enter as much information as possible for more accurate descriptions.
                             </Form.Text>
                         </Form.Group>
 
-                        <Button variant="light" size="lg" type="submit">
+                        <Button variant="light" size="lg" type="submit" style={{marginBottom: 20}} className="shadow-sm">
                             <span role="img" aria-label="robot">🤖</span> Get AI Suggestions <span role="img" aria-label="thinking face Emoji">🤔</span>
                         </Button>
                     </Form>
 
-                    <Card>
+                    <Card className="shadow">
                         <Card.Body>
                             <Card.Title>
                                 <h6>{this.state.heading}</h6>
@@ -82,7 +84,7 @@ class ProductDescription extends Component {
                                 <span>{this.state.response}</span>
                             </Card.Text>
                         </Card.Body>
-                    </Card>
+                    </Card> 
                 </Container>
             </div>
         )
