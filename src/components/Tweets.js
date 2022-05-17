@@ -11,7 +11,6 @@ class ProductDescription extends Component {
        this.state = {
            heading: 'The response from the AI will be shown here',
            response: '..... await the response',
-           items: []
        }
     }
 

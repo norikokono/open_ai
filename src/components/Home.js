@@ -13,7 +13,7 @@ class Home extends Component {
                         className="d-block w-100"
                         src={openAiImg}
                         alt="Open AI Logo" />
-                    <h1 style={{marginTop: 20}}>Online Artificial Intelligence AI (API) with OpenAI</h1>
+                    <h1 style={{marginTop: 20, textShadow: "1px 1px #BA55D3"}}>Online Artificial Intelligence AI (API) with OpenAI</h1>
                     <p style={{marginBottom: 30}}>Start by picking any of the use-cases below to start generating AI content.</p>
 
                     <Row>
