@@ -56,7 +56,7 @@ class ColdEmails extends Component {
                     <h4 style={{marginBottom: 20}}>This is perfect for marketing agents or companies who need fresh ideas daily on cold email content that is created by AI technology.</h4>
                     <Form onSubmit={this.onFormSubmit}>
                         <Form.Group className="mb-3" controlId="formBasicColdEmail">
-                            <Form.Label>What product would you like to get a description for?</Form.Label>
+                            <Form.Label>What cold email would you like to get created for?</Form.Label>
                             <Form.Control
                                 type="text"
                                 name="emailIdea"

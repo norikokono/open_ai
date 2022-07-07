@@ -5,7 +5,7 @@ import openAiImg from '../OpenAILogo.png';
 
 const { Configuration, OpenAIApi } = require("openai");
 
-class ProductDescription extends Component {
+class Tweets extends Component {
    constructor() {
        super()
        this.state = {
@@ -28,7 +28,7 @@ class ProductDescription extends Component {
         const openai = new OpenAIApi(configuration);
 
         openai.createCompletion("text-curie-001", {
-            prompt: `Write a detailed, smart, informative and professional product description for ${formDataObj.tweetKeywords}`,
+            prompt: `Write a detailed, smart, informative and professional Tweets for ${formDataObj.tweetKeywords}`,
             temperature: 0.8,
             max_tokens: 280,
             top_p: 1,
@@ -90,4 +90,4 @@ class ProductDescription extends Component {
     }
 }
 
-export default ProductDescription;
+export default Tweets;
